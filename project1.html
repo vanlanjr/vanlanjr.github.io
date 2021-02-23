@@ -33,17 +33,20 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Project 1: Note Tracker</h1>
+
 							<h2>The Problem</h2>
 							<p>Throughout college, I've been using the Notes app on my iPhone to keep track of all of my assignments in
 							my classes. This has been a very manual process. Every time I get a new assignment, I need to put it in the
 							proper section for the given section. Once I complete an assignment, I delete it from the note. For some
 							assignments, I decide a priority by putting a certain number of exclamation points next to it if it needs to be
 							completed soon. I would like to create an app that would make this whole process easier and more efficient.</p>
+
 							<h2>The Idea</h2>
 							<p>My idea is to write an application using Vue.js that allows the user to create a Note for tracking a 
 							List of Tasks that needs to be completed. The applcation will allow for the user to create multiple notes,
-							just like the iPhone version.
-							<h2>Some Requirements</h2>
+							just like the iPhone version.</p>
+
+							<h2>Draft of First Requirements</h2>
 							<ul>
 								<li>The application allows the user to create a note or multiple notes</li>
 								<li>The user is allowed to create a checklist of tasks on a note</li>
@@ -52,7 +55,29 @@
 								<li>The user can view previously completed tasks on the notes</li>
 								<li>more coming soon...</li>
 							</ul>
-							<p></p>
+
+							<h2>After More Consideration...</h2>
+							<p>After more consideration, I realized that the one functionality that I really want, in order to get the most
+								value out of the app I create, is for the application to send push notifications to my mobile device when
+								it is installed as a native application. The reason I want this is because that is a key feature that is missing
+								from the plain jane Notes app on my iPhone and Macbook.
+							</p>
+							<p>Based on my research so far, I have compiled a couple of ways to get push notifications to send to a mobile device:
+								<ul>
+									<li>Using Vue.js as frontend, Django as backend, and Google Firebase Cloud Messaging APNs Interface as a gateway between 
+											the two technologies.  In this solution,  Firebase allows for the application to send push notifications to the mobile device.
+											Currently, I am still a little confused on how this solution will pan out but I am very passionate about it.  
+											<a href="https://juliensalinas.com/en/vuejs-django-firebase-pwa-push-notifications/" target="_blank">Here</a> is the
+											documentation I found for the overall solution and <a href="https://firebase.google.com/docs/cloud-messaging/ios/client" target="_blank">
+											here</a> is some information I found on setting up a Firebase client on iOS.
+										</li>
+									<li>Using Vue Native instead of Vue.js would allow me to have access to provided device APIs. The native version of 
+										Vue has an API specifically for push notifications.  This would be a really simple way to solve my problem. However,
+										by using Vue Native, I wouldn't be able to access my application on other devices, as it would be native to Apple, and 
+										I wouldn't be able to access it from the browser. <a href="https://vue-native.io/docs/device-apis.html" target="_blank"> 
+										Here</a> is the documentation I found on this subject.</li>
+								</ul>
+							</p>
 						</div>
 					</section>
 
